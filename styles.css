@@ -185,8 +185,8 @@ html[data-theme="light"] .circle{mix-blend-mode:multiply}
   .c1{left: 15px;top:15px}
   .c2{left:105px;top:15px}
   .c3{left:60px; top:60px}
-  .l1{left: 16px;top:-6px}
-  .l2{left: 150px;top:-6px}
+  .l1{left: 16px;top:-2px}
+  .l2{left: 150px;top:-2px}
   .l3{left: 80px;top:210px}
   .venn-center{left: 80px;top: 80px;}
 }
