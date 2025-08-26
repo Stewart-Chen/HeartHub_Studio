@@ -32,7 +32,7 @@ select{height:36px}
 
 /* Tabs */
 .tabs{max-width:1200px;margin:6px auto 12px;padding:0 16px;display:flex;gap:10px;flex-wrap:wrap}
-.tab{padding:10px 16px;border-radius:999px;border:1px solid var(--line);background:var(--card);box-shadow:var(--shadow);color:#fff;cursor:pointer}
+.tab{padding:10px 16px;border-radius:999px;border:1px solid var(--line);background:var(--card);box-shadow:var(--shadow);color:var(--text);cursor:pointer}
 .tab:hover{border-color:var(--brand)}
 .tab.active{background:linear-gradient(135deg,var(--brand),var(--accent));color:#fff;border-color:transparent}
 .page{display:none} .page.active{display:block}
