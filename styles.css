@@ -200,3 +200,22 @@ html[data-theme="light"] .circle{mix-blend-mode:multiply}
     line-height:1.4;
   }
 }
+/* Roadmap：平板/小手機先 2 欄 */
+@media (max-width:640px){
+  .swim .row{
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+}
+
+/* Roadmap：超窄手機（≤360px）改成上下單欄 */
+@media (max-width:360px){
+  .swim .row{
+    grid-template-columns: 1fr;   /* 單欄直排 */
+    gap: 10px 0;                  /* 上下間距，左右縮小 */
+  }
+  .block{
+    min-height: auto;             /* 避免被固定高度撐大 */
+  }
+}
+
