@@ -120,11 +120,6 @@ select{height:36px}
   .tabs{flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch}
   .tab{white-space:nowrap}
 }
-@media (max-width:360px){
-  .controls .btn{
-    flex-basis: 100%;
-  }
-}
 /* ===== Roadmap ===== */
 .road{display:grid;gap:14px}
 .swim{background:var(--card);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow)}
