@@ -190,3 +190,25 @@ html[data-theme="light"] .circle{mix-blend-mode:multiply}
   .l3{left: 80px;top:210px}
   .venn-center{left: 80px;top: 80px;}
 }
+/* 超窄手機：Header 以格線區域重新排版，讓 .sub 跟在 .logo 後面 */
+@media (max-width:360px){
+  header{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "logo"
+      "sub"
+      "controls";
+    row-gap: 6px;
+  }
+  .logo{ grid-area: logo; align-items: flex-start; }
+  .sub{
+    grid-area: sub;
+    margin-left: 0;         /* 原本有的 margin-left 拿掉 */
+    font-size: 13px;
+    line-height: 1.4;
+    text-align: left;
+    word-break: keep-all;
+  }
+  .controls{ grid-area: controls; }
+}
