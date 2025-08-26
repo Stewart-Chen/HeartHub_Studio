@@ -177,13 +177,13 @@ html[data-theme="light"] .circle{mix-blend-mode:multiply}
 @media (max-width: 360px){
   .venn{width: 300px;height:260px}
   .c1,.c2,.c3{width: 150px;height: 150px;}
-  .c1{left: 15px;top:15px}
-  .c2{left:105px;top:15px}
-  .c3{left:60px; top:60px}
-  .l1{left: 16px;top:-2px}
-  .l2{left: 150px;top:-2px}
-  .l3{left: 80px;top:210px}
-  .venn-center{left: 80px;top: 80px;}
+  .c1{left: 15px;top: 30px;}
+  .c2{left:105px;top: 30px;}
+  .c3{left:60px;top: 75px;}
+  .l1{left: 16px;top: 2px;}
+  .l2{left: 150px;top: 2px;}
+  .l3{left: 80px;top: 230px;}
+  .venn-center{left: 60px;top: 100px;}
 }
 /* 超窄手機：Header 以格線區域重新排版，讓 .sub 跟在 .logo 後面 */
 @media (max-width:360px){
