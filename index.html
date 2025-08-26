@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>HeartHub Studio 心聚坊</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="styles.css" rel="stylesheet" />
+</head>
+<body>
+  <header>
+    <div class="logo" aria-label="HeartHub Studio Logo">
+      <!-- 幾何 Logo：心形 + 圓 + 葉片（純 SVG） -->
+      <svg viewBox="0 0 64 64" aria-hidden="true" class="logo-svg">
+        <defs>
+          <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#6a7cff"/><stop offset="1" stop-color="#25c4f2"/>
+          </linearGradient>
+        </defs>
+        <path d="M32 50 C20 40 10 32 10 22 a10 10 0 0 1 18-6 a2 2 0 0 0 8 0 a10 10 0 0 1 18 6 c0 10-10 18-22 28z" fill="url(#g1)"/>
+        <circle cx="32" cy="26" r="4" fill="#fff" opacity="0.95"/>
+        <path d="M46 14 c4 8-2 16-10 18 4-6 5-12 10-18z" fill="#7be495" opacity=".9"/>
+      </svg>
+      <div>
+        <div class="brand">HeartHub Studio <span class="brand-sub">心聚坊</span></div>
+        <div class="note">BMC｜產品路線圖｜品牌定位（Airbnb × WeWork × INBODY）</div>
+      </div>
+    </div>
+    <div class="controls">
+      <button class="btn" id="saveTxt">儲存（下載 content.txt）</button>
+      <button class="btn" id="themeBtn">深／淺色切換</button>
+      <button class="btn" onclick="window.print()">列印 / 另存 PDF</button>
+      <button class="btn" id="editToggle">編輯模式</button>
+    </div>
+  </header>
+
+  <nav class="tabs">
+    <button class="tab active" data-tab="page-bmc">商業模式圖（BMC）</button>
+    <button class="tab" data-tab="page-roadmap">產品路線圖（Roadmap）</button>
+    <button class="tab" data-tab="page-venn">品牌定位（Venn）</button>
+  </nav>
+
+  <!-- ===== BMC ===== -->
+  <section id="page-bmc" class="page active">
+    <div class="toolbar">
+      <div class="group">
+        <label for="filter">顯示區塊（聚焦放大）：</label>
+        <select id="filter">
+          <option value="all">全部</option>
+          <option value="vp">價值主張</option>
+          <option value="ka">關鍵活動</option>
+          <option value="kp">關鍵合作夥伴</option>
+          <option value="kr">關鍵資源</option>
+          <option value="cr">顧客關係</option>
+          <option value="ch">通路</option>
+          <option value="cs">顧客族群</option>
+          <option value="cost">成本結構</option>
+          <option value="rev">收入來源</option>
+        </select>
+      </div>
+      <div class="group">
+        <span>標籤篩選：</span>
+        <label class="chip"><span class="dot dot-course"></span><input type="checkbox" id="fCourse" checked> 課程</label>
+        <label class="chip"><span class="dot dot-data"></span><input type="checkbox" id="fData" checked> 數據</label>
+        <label class="chip"><span class="dot dot-incub"></span><input type="checkbox" id="fIncub" checked> 孵化</label>
+        <label class="chip"><span class="dot dot-commerce"></span><input type="checkbox" id="fCommerce" checked> 商品</label>
+      </div>
+      <div class="group">
+        <label class="chip"><input type="checkbox" id="onlyBlocks" /> 只顯示含匹配標籤的區塊</label>
+        <label class="chip"><input type="checkbox" id="toggleTags" checked /> 顯示標籤文字</label>
+      </div>
+    </div>
+    <main class="canvas">
+      <section id="bmc" class="grid"><!-- JS 渲染 --></section>
+    </main>
+  </section>
+
+  <!-- ===== Roadmap ===== -->
+  <section id="page-roadmap" class="page">
+    <div class="toolbar">
+      <div class="group"><b>產品路線圖 · 3 年期（Y1 驗證｜Y2 擴張｜Y3 規模化）</b></div>
+      <div class="group">
+        <span>年份：</span>
+        <label class="chip"><input type="checkbox" id="y1" checked> Y1</label>
+        <label class="chip"><input type="checkbox" id="y2" checked> Y2</label>
+        <label class="chip"><input type="checkbox" id="y3" checked> Y3</label>
+      </div>
+      <div class="group">
+        <span>核心：</span>
+        <label class="chip"><span class="dot dot-course"></span><input type="checkbox" id="cCourse" checked> 課程</label>
+        <label class="chip"><span class="dot dot-data"></span><input type="checkbox" id="cData" checked> 數據</label>
+        <label class="chip"><span class="dot dot-incub"></span><input type="checkbox" id="cIncub" checked> 孵化</label>
+        <label class="chip"><span class="dot dot-commerce"></span><input type="checkbox" id="cCommerce" checked> 商品</label>
+      </div>
+    </div>
+    <main class="canvas">
+      <div class="road" id="road"><!-- JS 渲染 --></div>
+    </main>
+  </section>
+
+  <!-- ===== Venn ===== -->
+  <section id="page-venn" class="page">
+    <main class="canvas">
+      <div class="card">
+        <div class="venn-wrap">
+          <div class="venn" id="vennArea">
+            <div class="circle c1"></div>
+            <div class="circle c2"></div>
+            <div class="circle c3"></div>
+            <div class="venn-label l1 editable" contenteditable="false">Airbnb（媒合）</div>
+            <div class="venn-label l2 editable" contenteditable="false">WeWork（孵化）</div>
+            <div class="venn-label l3 editable" contenteditable="false">INBODY（數據）</div>
+            <div class="venn-center editable" contenteditable="false">HeartHub Studio</div>
+          </div>
+          <div class="venn-legend">
+            <h4 class="editable" contenteditable="false">品牌定位說明</h4>
+            <ul id="vennList"><!-- JS 渲染 --></ul>
+          </div>
+        </div>
+      </div>
+    </main>
+  </section>
+
+  <div class="edit-tip" id="editTip">編輯模式：可直接點擊卡片/文字修改。完成後按「儲存」，下載 <b>content.txt</b> 覆蓋到 GitHub。</div>
+
+  <script src="app.js"></script>
+</body>
+</html>
+

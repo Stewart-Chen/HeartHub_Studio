@@ -1,0 +1,99 @@
+{
+  "bmc": {
+    "kp": [
+      {"text":"療癒師 / 專業講師","tags":["incub"]},
+      {"text":"醫院 / 學校 / 長照中心","tags":["course"]},
+      {"text":"企業 HR / ESG 部門","tags":["course","data"]},
+      {"text":"材料供應商 / 藝術創作者","tags":["commerce"]},
+      {"text":"平台開發與研究團隊","tags":["data"]}
+    ],
+    "ka": [
+      {"text":"課程模組設計與交付","tags":["course"]},
+      {"text":"平台開發與維運（上架／媒合／商城）","tags":["data","commerce"]},
+      {"text":"心靈 INBODY 模組開發與驗證","tags":["data"]},
+      {"text":"商品研發、供應鏈與品質控管","tags":["commerce"]},
+      {"text":"行銷內容與社群運營","tags":["incub","course"]},
+      {"text":"療癒師培訓與社群孵化","tags":["incub"]}
+    ],
+    "kr": [
+      {"text":"專業療癒師社群與課程 IP","tags":["incub","course"]},
+      {"text":"平台技術與資料基礎","tags":["data"]},
+      {"text":"心靈 INBODY 指標與演算法","tags":["data"]},
+      {"text":"品牌資產與案例資料庫","tags":["course"]},
+      {"text":"商品設計、供應與倉儲","tags":["commerce"]}
+    ],
+    "vp": [
+      {"text":"B2B：標準化療癒課程 + 成效數據報告","tags":["course","data"]},
+      {"text":"B2C：14 天療癒挑戰（線上課程＋材料包）與商城","tags":["commerce","course"]},
+      {"text":"療癒師：創業孵化、品牌化、媒合案源與透明分潤","tags":["incub"]},
+      {"text":"企業／醫療／校園：ESG 與員工關懷的一站式解決方案","tags":["course","data"]},
+      {"text":"數據化療癒：心情溫度計、互動測驗、追蹤報告","tags":["data"]}
+    ],
+    "cr": [
+      {"text":"B2B 長期合作（SLA／續約機制）","tags":["course","data"]},
+      {"text":"B2C 線上挑戰社群與任務化體驗","tags":["commerce"]},
+      {"text":"療癒師社群支持、師培與共學","tags":["incub"]},
+      {"text":"案例內容行銷與客戶成功機制","tags":["course"]}
+    ],
+    "ch": [
+      {"text":"心聚坊平台（網站／App）","tags":["data","commerce"]},
+      {"text":"企業合作（BD／標案／轉介紹）","tags":["course"]},
+      {"text":"社群媒體（IG／FB／YT／LINE）","tags":[]},
+      {"text":"商城（課程上架、挑戰包、教具、老師作品）","tags":["commerce"]}
+    ],
+    "cs": [
+      {"text":"企業（員工關懷／ESG 部門）","tags":["course","data"]},
+      {"text":"醫院／長照中心／學校","tags":["course"]},
+      {"text":"一般消費者（Well-being 愛好者）","tags":["commerce"]},
+      {"text":"專業療癒師／老師","tags":["incub"]}
+    ],
+    "cost": [
+      {"text":"平台開發與維運（MVP → SaaS 模組化）","tags":["data"]},
+      {"text":"課程講師費／行政／場地／材料","tags":["course"]},
+      {"text":"商品生產、包裝、倉儲與物流","tags":["commerce"]},
+      {"text":"行銷推廣與內容製作","tags":[]},
+      {"text":"團隊薪資與師培計畫","tags":["incub"]}
+    ],
+    "rev": [
+      {"text":"B2B 課程與專案（半天／全天／系列）","tags":["course"]},
+      {"text":"B2C 體驗課與線上挑戰（14 天）","tags":["course","commerce"]},
+      {"text":"療癒商品（挑戰包／教具／老師作品）","tags":["commerce"]},
+      {"text":"SaaS 工具授權與報表（心靈 INBODY）","tags":["data"]}
+    ]
+  },
+  "roadmap": {
+    "course": {
+      "y1": ["半天/全天/系列模組上架","企業 PoC（>5 家）","課後標準化報告"],
+      "y2": ["行業方案（醫療/校園/科技）","北中南講師網絡","線上+線下混成班"],
+      "y3": ["課程認證與授權制度","海外華語市場合作","內容 IP 化（教材/出版）"]
+    },
+    "data": {
+      "y1": ["心情溫度計 v1（前後測）","單場活動報告 v1","儀表板雛型"],
+      "y2": ["長期追蹤曲線 v2","互動小測驗 A/B 測試","SaaS 多租戶與權限"],
+      "y3": ["產業基準指標（Benchmark）","API/SSO 對接 HR 系統","洞察引擎"]
+    },
+    "incub": {
+      "y1": ["師資審核與入駐流程","共學社群（月會/工作坊）","分潤與費率公開透明"],
+      "y2": ["師培與輔導模組","個人頁/作品集/評價","BD 共銷（推薦獎金）"],
+      "y3": ["師資等級與權益分級","海外講師引進交流","生態系合夥計畫"]
+    },
+    "commerce": {
+      "y1": ["14 天療癒挑戰包（材料＋線上）","教具/材料標準化 BOM","小量多樣/預購制"],
+      "y2": ["老師作品館/限量聯名","訂閱盒（每季主題）","物流/倉儲委外最佳化"],
+      "y3": ["海外寄送與跨境商城","數據驅動補貨/組合推薦","直營＋通路（B2B2C）"]
+    }
+  },
+  "venn": {
+    "l1": "Airbnb（媒合）",
+    "l2": "WeWork（孵化）",
+    "l3": "INBODY（數據）",
+    "center": "HeartHub Studio",
+    "legend": [
+      "Airbnb：需求與資源的媒合",
+      "WeWork：療癒師創業孵化",
+      "INBODY：成效數據化與可視化",
+      "交集（中心）：平台 × 商品 × SaaS 的療癒產業基礎建設"
+    ]
+  }
+}
+
