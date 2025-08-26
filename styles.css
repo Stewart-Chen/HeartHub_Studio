@@ -86,7 +86,7 @@ header{max-width:1200px;margin:22px auto 8px;padding:0 16px;display:grid;grid-te
 
 /* ===== Venn ===== */
 .venn-wrap{display:flex;gap:28px;align-items:center;justify-content:center;flex-wrap:wrap}
-.venn{position:relative;width:500px;height:360px}
+.venn{position:relative;width:500px;height:400px}
 .circle{position:absolute;border-radius:50%;mix-blend-mode:multiply;opacity:.55}
 .c1{background:#ff8b8b;width:300px;height:300px;left:40px;top:30px}
 .c2{background:#8fb0ff;width:300px;height:300px;left:180px;top:30px}
