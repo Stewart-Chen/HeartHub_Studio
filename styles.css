@@ -144,7 +144,7 @@ html[data-theme="dark"] .circle{mix-blend-mode:screen;opacity:.72}
 html[data-theme="light"] .circle{mix-blend-mode:multiply}
 .venn-label{position:absolute;font-weight:700;text-shadow:0 2px 6px rgba(0,0,0,.18)}
 .l1{left:80px;top:6px} .l2{left:340px;top:6px} .l3{left:210px;top:312px}
-.venn-center{position:absolute;left:230px;top:170px;font-weight:800;text-shadow:0 2px 6px rgba(0,0,0,.18);font-size:18px}
+.venn-center{position:absolute;left:200px;top:170px;font-weight:800;text-shadow:0 2px 6px rgba(0,0,0,.18);font-size:18px}
 .venn-legend{min-width:180px}
 .venn-legend h4{margin:0 0 10px}
 .venn-legend ul{margin:0;padding-left:18px}
