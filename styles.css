@@ -137,3 +137,32 @@ html[data-theme="light"] .circle{mix-blend-mode:multiply}
   .canvas{padding:0}
   .cell,.swim,.venn-wrap{break-inside:avoid}
 }
+/* 讓容器不要外溢 */
+.venn-wrap{max-width:100%; overflow:hidden}
+.venn{margin:0 auto}
+
+/* 640px 以下：縮圈圈 + 重新定位 */
+@media (max-width:640px){
+  .venn{width:360px;height:300px}
+  .c1,.c2,.c3{width:240px;height:240px}
+  .c1{left:20px; top:20px}
+  .c2{left:120px; top:20px}   /* ← 原本 180px 會外溢，改 120px */
+  .c3{left:70px;  top:70px}
+  .l1{left:44px; top:-4px}
+  .l2{left:230px;top:-4px}
+  .l3{left:130px;top:250px}
+  .venn-center{left:170px;top:140px}
+}
+
+/* 更窄（~360px）再縮一級，保證不外溢 */
+@media (max-width:360px){
+  .venn{width:300px;height:260px}
+  .c1,.c2,.c3{width:200px;height:200px}
+  .c1{left:15px; top:15px}
+  .c2{left:105px;top:15px}
+  .c3{left:60px; top:60px}
+  .l1{left:26px; top:-6px}
+  .l2{left:190px;top:-6px}
+  .l3{left:110px;top:210px}
+  .venn-center{left:146px;top:120px}
+}
