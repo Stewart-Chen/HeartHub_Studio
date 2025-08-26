@@ -49,8 +49,10 @@ select{height:36px}
 
 /* Canvas/Card */
 .canvas{max-width:1200px;margin:0 auto 36px;padding:0 16px 16px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);padding:18px}
-
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);position: relative;overflow: hidden;padding:0}
+.card-body {
+  padding: 18px;
+}
 /* ===== BMC（統一三欄 + 響應式）===== */
 .grid{
   display:grid; gap:14px;
