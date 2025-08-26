@@ -2,30 +2,18 @@
 <html lang="zh-Hant">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>HeartHub Studio 心聚坊</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="styles.css" rel="stylesheet" />
 </head>
 <body>
   <header>
     <div class="logo" aria-label="HeartHub Studio Logo">
-      <!-- 幾何 Logo：心形 + 圓 + 葉片（純 SVG） -->
-      <svg viewBox="0 0 64 64" aria-hidden="true" class="logo-svg">
-        <defs>
-          <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0" stop-color="#6a7cff"/><stop offset="1" stop-color="#25c4f2"/>
-          </linearGradient>
-        </defs>
-        <path d="M32 50 C20 40 10 32 10 22 a10 10 0 0 1 18-6 a2 2 0 0 0 8 0 a10 10 0 0 1 18 6 c0 10-10 18-22 28z" fill="url(#g1)"/>
-        <circle cx="32" cy="26" r="4" fill="#fff" opacity="0.95"/>
-        <path d="M46 14 c4 8-2 16-10 18 4-6 5-12 10-18z" fill="#7be495" opacity=".9"/>
-      </svg>
-      <div>
-        <div class="brand">HeartHub Studio <span class="brand-sub">心聚坊</span></div>
-        <div class="note">BMC｜產品路線圖｜品牌定位（Airbnb × WeWork × INBODY）</div>
-      </div>
+      <img src="logo.png" alt="HeartHub Studio Logo" class="logo-img" width="42" height="42" />
+      <div class="name">HeartHub Studio 心聚坊</div>
+      <div class="sub">BMC｜產品路線圖｜品牌定位（Airbnb × WeWork × INBODY）</div>
     </div>
+    <div class="note">BMC｜產品路線圖｜品牌定位（Airbnb × WeWork × INBODY）</div>
     <div class="controls">
       <button class="btn" id="saveTxt">儲存（下載 content.txt）</button>
       <button class="btn" id="themeBtn">深／淺色切換</button>
@@ -126,4 +114,3 @@
   <script src="app.js"></script>
 </body>
 </html>
-
