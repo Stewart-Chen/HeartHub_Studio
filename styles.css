@@ -146,12 +146,6 @@ html[data-theme="light"] .circle{mix-blend-mode:multiply}
 .venn-legend{min-width:320px}
 .venn-legend h4{margin:0 0 10px}
 .venn-legend ul{margin:0;padding-left:18px}
-@media (max-width:640px){
-  .venn{width:360px;height:300px}
-  .c1,.c2,.c3{width:240px;height:240px}
-  .l1{left:44px;top:-4px} .l2{left:230px;top:-4px} .l3{left:130px;top:250px}
-  .venn-center{left:170px;top:140px}
-}
 
 /* 編輯提示 */
 .edit-tip{position:fixed;right:16px;bottom:16px;background:var(--card);color:var(--muted);
