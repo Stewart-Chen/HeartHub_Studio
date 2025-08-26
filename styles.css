@@ -88,13 +88,41 @@ select{height:36px}
   .cell li{margin:4px 0}
   .toolbar{gap:8px}
   .tabs{gap:8px}
+  header{
+    grid-template-columns: 1fr; /* 由橫排改成一欄直排 */
+    gap: 8px;
+    align-items: start;
+  }
+  .logo{ align-items: flex-start; }
+
+  .name{ font-size: 18px; }
+  .sub{
+    font-size: 14px;
+    line-height: 1.4;
+    word-break: keep-all;
+  }
+
+  /* 右側按鈕群組可換行、在手機上兩顆一排 */
+  .controls{
+    justify-self: stretch;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .controls .btn{
+    flex: 1 1 calc(50% - 8px); /* 兩顆一排；太窄時自動掉到下一行 */
+  }
 }
 /* 小螢幕：標籤列可橫向捲動，避免擠成多行 */
 @media (max-width:480px){
   .tabs{flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch}
   .tab{white-space:nowrap}
 }
-
+@media (max-width:360px){
+  .controls .btn{
+    flex-basis: 100%;
+  }
+}
 /* ===== Roadmap ===== */
 .road{display:grid;gap:14px}
 .swim{background:var(--card);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow)}
